@@ -7,11 +7,19 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        String text = scanner.nextLine();
-        int integer = Integer.valueOf(scanner.nextLine());
-        double floatingPoint = Double.valueOf(scanner.nextLine());
-        boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
+        System.out.println("Give the first number:");
+        double num1 = Double.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        double num2 = Double.valueOf(scanner.nextLine());
 
-        // and so on
+        double result1 = num1 + num2;
+        System.out.println(num1 + " + " + num2 + " = " + result1);
+        double result2 = num1 - num2;
+        System.out.println(num1 + " - " + num2 + " = " + result2);
+        double result3 = num1 * num2;
+        System.out.println(num1 + " * " + num2 + " = " + result3);
+        double result4 = num1 / num2;
+        System.out.println(num1 + " / " + num2 + " = " + result4);
+
     }
 }
