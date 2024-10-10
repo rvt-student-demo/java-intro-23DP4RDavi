@@ -4,14 +4,16 @@ import java.util.*;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
-        Scanner scanner = new Scanner(System.in);
-        for (double num = Double.valueOf(scanner.nextLine());num < 100;){
-            num = num + 1;
-            System.out.println(num);;
-        }
+            public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Give a number:");
+            int num = scanner.nextInt();
 
+            int fact = 1;
+            for (int i = 1; i <= num; i++) {
+                fact = i*fact;
+            }
+            System.out.println("Factorial: " + fact);
+        }
     }
-}
 
