@@ -22,6 +22,8 @@ public class App
                 System.out.println("Numbers: " + count);
                 avg = (double)sum / (double)count;
                 System.out.println("Average: " + avg);
+                System.out.println("Even numbers: " + even);
+                System.out.println("Odd numbers: " + odd);
                 break;
             }
             else{
