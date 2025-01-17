@@ -1,7 +1,5 @@
 package lv.rvt;
 
-import java.util.*;
-
 public class Box {
     public double width;
     public double height;
