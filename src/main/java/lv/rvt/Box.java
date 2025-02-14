@@ -1,27 +1,32 @@
 package lv.rvt;
+import java.util.*;
 
-public class Box {
-    public double width;
-    public double height;
-    public  double length;
+public class Box implements Packable {
+    private double maxCapacity;
+    private ArrayList<Packable> items;
 
-    public Box(double width, double height, double length) {
-        this.width = width;
-        this.height = height;
-        this.length = length;
+    public Box(double maxCapacity) {
+        this.maxCapacity = maxCapacity;
+        this.items = new ArrayList<>();
     }
 
-    public Box(double side) {
-        this.width = side;
-        this.height = side;
-        this.length = side;
+    public void add(Packable item) {
+        if (this.weight() + item.weight() <= this.maxCapacity) {
+            this.items.add(item);
+        }
     }
 
-    public double volume() {
-        return width * height * length;
+    @Override
+    public double weight() {
+        double totalWeight = 0;
+        for (Packable item : items) {
+            totalWeight += item.weight();
+        }
+        return totalWeight;
     }
 
-    public double area() {
-        return 2 * (width * height + width * length + height * length);
+    @Override
+    public String toString() {
+        return "Box: " + this.items.size() + " items, total weight " + this.weight() + " kg";
     }
 }
